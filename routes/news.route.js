@@ -9,3 +9,4 @@ router.post("/news", newsController.addNews);
 router.patch("/news", newsController.changeNews )
 
 module.exports = router;
+    

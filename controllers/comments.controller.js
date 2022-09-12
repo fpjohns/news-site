@@ -11,7 +11,7 @@ module.exports.commentsController = {
   },
   addComment: async (req, res) => {
     try{
-      const comment = await Comment.findById(req.params.id)
+      const comment = await Comment.create(req.params.id)
     res.json(comment)
     }catch(e){
       res.json(e.messege)
@@ -20,7 +20,7 @@ module.exports.commentsController = {
   },
   getComment: async (req, res) => {
     try {
-      const comment = await Comment.findById(req.params.id)
+      const comment = await Comment.find({newsWrittenComment: req.params.id})
       res.json(comment)
     } catch(e){
       res.json(e.messege)

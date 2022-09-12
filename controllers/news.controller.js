@@ -33,7 +33,7 @@ module.exports.newsController = {
         res.json(e.message)
     }
     
-  },
+  },    
  
     changeNews: async(req, res) =>{
         try{
